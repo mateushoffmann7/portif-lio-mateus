@@ -11,6 +11,7 @@
   --bg-color: #400101;
   --text-color: #8da6a6;
   --hover-color: #bf2a2a;
+  --button-style: #28282d;
 }
 
 body {
@@ -56,24 +57,119 @@ body {
 
 .social {
   margin: 20px 0;
-}
-
-.social a {
-  text-decoration: none;
-  border: var(--text-color) solid 1px;
-  border-radius: 5px;
-  color: var(--text-color);
-  padding: 10px 50px;
-  margin-right: 10px;
-}
-
-.social a:hover {
-  color: var(--hover-color);
-  border: solid 1px var(--hover-color);
+  display: flex;
+  gap: 20px;
 }
 
 .perfilImg img {
   height: 350px;
   border-radius: 50%;
   border: 3px solid var(--text-color);
+}
+
+.btn {
+  display: block;
+  padding: 0.7em 1em;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: var(--text-color);
+  letter-spacing: 0.1em;
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cube {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: var(--hover-color);
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+  transition: all 0.4s;
+}
+
+.cube .bg-top .bg-inner {
+  bottom: 0;
+}
+
+.cube .bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: var(--hover-color);
+  transition: all 0.4s;
+}
+
+.cube .bg-right {
+  position: absolute;
+  background: var(--hover-color);
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+  transition: all 0.4s;
+}
+
+.cube .bg-right .bg-inner {
+  left: 0;
+}
+
+.cube .bg-inner {
+  background: var(--button-style);
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+}
+.text a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.cube .text {
+  position: relative;
+  transition: all 0.4s;
+}
+
+.cube:hover .bg-inner {
+  background: var(--bg-color);
+  transition: all 0.4s;
+}
+
+.cube:hover .text {
+  color: var(--hover-color);
+  transition: all 0.4s;
+}
+
+.cube:hover .bg-right,
+.cube:hover .bg,
+.cube:hover .bg-top {
+  background: var(--hover-color);
+}
+
+.cube:active {
+  z-index: 9999;
+  animation: bounce 0.1s linear;
+}
+
+@keyframes bounce {
+  50% {
+    transform: scale(0.9);
+  }
 }
