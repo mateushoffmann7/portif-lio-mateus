@@ -8,14 +8,25 @@
 }
 
 :root {
-  --bg-color: #400101;
+  --bg-color: linear-gradient(45deg, #8da6a6, #400101, #400101);
   --text-color: #8da6a6;
   --hover-color: #bf2a2a;
   --button-style: #28282d;
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
+}
+
+#pageOne {
+  height: 200dvh;
+}
+
+.headerSiteColor {
+  background-color: #28282d;
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
 .navBar img {
