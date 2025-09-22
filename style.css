@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+:root {
+  --bg-color: #400101;
+  --text-color: #8da6a6;
+  --hover-color: #bf2a2a;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.headerSite {
+  background-color: aliceblue;
+}
+
+.navBar img {
+  height: 100px;
+  padding: 20px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  color: var(--text-color);
+}
+
+.active {
+  color: var(--hover-color);
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  align-items: flex-end;
+}
+
+.textWelcome {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  color: var(--text-color);
+  gap: 10px;
+}
+
+.perfilImg img {
+  height: 350px;
+  border-radius: 50%;
+}
