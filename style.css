@@ -102,3 +102,7 @@ body {
   color: var(--hover-color);
   background-color: var(--text-color);
 }
+
+.active {
+  color: var(--hover-color);
+}
