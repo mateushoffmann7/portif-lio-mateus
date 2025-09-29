@@ -3,12 +3,12 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: bold;
 }
 
 :root {
-  --bg-color: linear-gradient(45deg, #8da6a6, #400101, #400101);
+  --bg-color: #400101;
   --bg-color-default: #400101;
   --text-color: #8da6a6;
   --hover-color: #bf2a2a;
@@ -83,7 +83,7 @@ body {
 }
 
 .perfilImg img {
-  height: 350px;
+  height: 300px;
   border-radius: 50%;
   border: 3px solid var(--text-color);
 }
